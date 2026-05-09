@@ -86,6 +86,10 @@ body {
     cursor: pointer;
 }
 
+.nav-cta-mobile {
+    display: none;
+}
+
 /* --- BOTONES --- */
 .btn {
     padding: 12px 25px;
@@ -213,20 +217,60 @@ body {
     background-color: #f0f2f5;
 }
 
-.video-wrapper {
-    max-width: 900px;
+.videos-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+    gap: 30px;
     margin: 40px auto 0;
+    max-width: 1840px; /* Ajustado para dos videos anchos */
+}
+
+.video-wrapper {
     position: relative;
     padding-bottom: 56.25%;
     height: 0;
     border-radius: 12px;
     overflow: hidden;
-    box-shadow: 0 20px 40px rgba(0,0,0,0.2);
+    box-shadow: 0 15px 30px rgba(12, 11, 11, 0.15);
 }
 
-.video-wrapper iframe {
+.video-link {
+    position: relative;
+    display: block;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 15px 30px rgba(0,0,0,0.15);
+    transition: transform 0.3s;
+}
+
+.video-link:hover {
+    transform: translateY(-5px);
+}
+
+.video-thumbnail {
+    width: 100%;
+    display: block;
+}
+
+.video-play-button {
     position: absolute;
-    top: 0; left: 0; width: 100%; height: 100%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 4rem;
+    color: white;
+    background: rgba(0,0,0,0.5);
+    border-radius: 50%;
+    width: 80px;
+    height: 80px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: background 0.3s;
+}
+
+.video-link:hover .video-play-button {
+    background: rgba(212, 163, 115, 0.8);
 }
 
 /* --- CONTACT --- */
@@ -237,6 +281,7 @@ body {
 .contact-form {
     max-width: 600px;
     margin: 40px auto 0;
+    padding: 0 15px;
 }
 
 .contact-form input, .contact-form textarea {
@@ -269,7 +314,27 @@ body {
 }
 
 /* --- RESPONSIVE --- */
+@media (max-width: 992px) {
+    .services-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
 @media (max-width: 768px) {
+    .header-container {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        background: var(--white);
+        padding: 20px;
+        box-shadow: 0 5px 10px rgba(0,0,0,0.1);
+        text-align: center;
+    }
+    
     .nav-list {
         display: none;
         flex-direction: column;
@@ -286,11 +351,39 @@ body {
         display: flex;
     }
 
+    .nav-cta-mobile {
+        display: block;
+        margin-top: 15px;
+    }
+
     .btn-menu {
         display: block;
     }
 
-    .hero-title { font-size: 2.2rem; }
-    .hero-buttons { flex-direction: column; align-items: center; }
-    .hero-buttons .btn { width: 100%; max-width: 300px; }
+    .hero-title { 
+        font-size: 2.2rem; 
+    }
+
+    .hero-buttons { 
+        flex-direction: column; 
+        align-items: center; 
+    }
+
+    .hero-buttons .btn { 
+        width: 100%; 
+        max-width: 300px; 
+    }
+
+    .stats-grid {
+        flex-direction: column;
+        gap: 40px;
+    }
+
+    .videos-container {
+        grid-template-columns: 1fr;
+    }
+
+    .contact-form {
+        padding: 0 15px;
+    }
 }

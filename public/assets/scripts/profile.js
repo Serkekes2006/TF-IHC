@@ -22,9 +22,9 @@ document.addEventListener('DOMContentLoaded', () => {
     const navLinks = document.querySelectorAll('.nav-link');
     navLinks.forEach(link => {
         link.addEventListener('click', () => {
-            navList.classList.remove('active');
-            const icon = menuToggle.querySelector('i');
-            if (icon) {
+            if (navList.classList.contains('active')) {
+                navList.classList.remove('active');
+                const icon = menuToggle.querySelector('i');
                 icon.classList.remove('fa-times');
                 icon.classList.add('fa-bars');
             }
