@@ -1,152 +1,135 @@
 <!DOCTYPE html>
-<html lang="es-419">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="EcoMove - Movilidad sostenible, alquiler de bicicletas y scooters en Lima.">
-    <meta name="author" content="TU_CODIGO_DE_ESTUDIANTE"> 
-    
-    <title>EcoMove | Movilidad Sustentable</title>
-
+    <title>SpacePulse | Diseño y Remodelación Profesional</title>
+    <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&family=Roboto:wght@500;700&display=swap" rel="stylesheet">
-
+    <!-- Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
-
     <link rel="stylesheet" href="styles/styles.css">
 </head>
 <body>
 
     <header class="main-header">
         <div class="container header-container">
-            <a href="#" class="logo" aria-label="Ir al inicio">EcoMove</a>
-            
-            <nav class="main-nav">
+            <a href="#" class="logo">SpacePulse</a>
+            <nav id="navbar">
                 <ul class="nav-list">
                     <li><a href="#home" class="nav-link">Inicio</a></li>
                     <li><a href="#services" class="nav-link">Servicios</a></li>
-                    <li><a href="#impact" class="nav-link">Impacto</a></li>
+                    <li><a href="#experts" class="nav-link">Especialistas</a></li>
                     <li><a href="#contact" class="nav-link">Contacto</a></li>
                 </ul>
             </nav>
-            
             <div class="header-actions">
-                <a href="#" class="btn btn-login">Iniciar Sesión</a>
-                <button class="mobile-menu-btn" aria-label="Menú"><i class="fas fa-bars"></i></button>
+                <button id="menu-toggle" class="btn-menu" aria-label="Abrir menú">
+                    <i class="fas fa-bars"></i>
+                </button>
+                <a href="#contact" class="btn btn-primary btn-cta-header">Agendar Cita</a>
             </div>
         </div>
     </header>
 
     <main>
+        <!-- Hero Section -->
         <section id="home" class="hero-section">
-            <div class="container hero-content">
-                <h1 class="hero-title">Movilidad sustentable para un futuro más limpio</h1>
-                
-                <p class="hero-text">Productos de calidad y diseños exclusivos, superando siempre sus expectativas.</p>
-                
+            <div class="container">
+                <h1 class="hero-title">Tu hogar merece un diseño a tu medida</h1>
+                <p class="hero-text">Conecta con interioristas expertos para resolver dudas en tiempo real y recibe visitas técnicas para transformar tus espacios con precisión absoluta.</p>
                 <div class="hero-buttons">
-                    <button class="btn btn-primary">Acceder a la app</button>
-                    <button class="btn btn-outline">Ver servicios</button>
+                    <a href="#contact" class="btn btn-primary">Empezar mi proyecto</a>
+                    <a href="#services" class="btn btn-accent">Ver servicios</a>
                 </div>
             </div>
         </section>
 
+        <!-- KPIs Section -->
         <section class="stats-section">
             <div class="container stats-grid">
-                <article class="stat-card">
-                    <h2 class="stat-number">120</h2>
-                    <p class="stat-label">Viajes hoy</p>
-                </article>
-                <article class="stat-card">
-                    <h2 class="stat-number">32</h2>
-                    <p class="stat-label">Estaciones activas</p>
-                </article>
-                <article class="stat-card">
-                    <h2 class="stat-number">1.8t</h2>
-                    <p class="stat-label">CO₂ Ahorrado</p>
-                </article>
+                <div class="stat-card">
+                    <span class="stat-number">15+</span>
+                    <p>Especialistas Online</p>
+                </div>
+                <div class="stat-card">
+                    <span class="stat-number">1,200+</span>
+                    <p>Espacios Renovados</p>
+                </div>
+                <div class="stat-card">
+                    <span class="stat-number">4.9/5</span>
+                    <p>Calificación de Clientes</p>
+                </div>
             </div>
         </section>
 
+        <!-- Services Section -->
         <section id="services" class="services-section">
             <div class="container">
-                <h2 class="section-title">Nuestros Servicios</h2>
+                <h2 class="section-title">¿Cómo te ayudamos?</h2>
                 <div class="services-grid">
                     <article class="service-card">
-                        <i class="fas fa-bicycle service-icon"></i>
-                        <h3 class="service-title">Alquiler de bicicletas</h3>
-                        <p class="service-desc">Bicicletas mecánicas y asistidas disponibles en estaciones cercanas.</p>
+                        <i class="fas fa-comments-dollar service-icon"></i>
+                        <h3 class="service-title">Consultoría Instantánea</h3>
+                        <p>Nuestros expertos responden tus dudas sobre materiales, paletas de colores y optimización de presupuesto por chat.</p>
                     </article>
 
                     <article class="service-card">
-                        <i class="fas fa-bolt service-icon"></i>
-                        <h3 class="service-title">Alquiler de scooters</h3>
-                        <p class="service-desc">Movilidad eléctrica rápida para distancias cortas.</p>
+                        <i class="fas fa-home service-icon"></i>
+                        <h3 class="service-title">Visitas de Diagnóstico</h3>
+                        <p>Agendamos visitas a tu domicilio para evaluar la iluminación, medidas y estructura, garantizando un plan 100% efectivo.</p>
                     </article>
 
                     <article class="service-card">
-                        <i class="fas fa-map-marked-alt service-icon"></i>
-                        <h3 class="service-title">Rutas Eco-friendly</h3>
-                        <p class="service-desc">Rutas optimizadas para menor tráfico y mayor seguridad.</p>
-                    </article>
-
-                    <article class="service-card">
-                        <i class="fas fa-comment-dots service-icon"></i>
-                        <h3 class="service-title">Educación Ambiental</h3>
-                        <p class="service-desc">Eventos y testimonios sobre el impacto positivo.</p>
+                        <i class="fas fa-drafting-compass service-icon"></i>
+                        <h3 class="service-title">Planos y Renders 3D</h3>
+                        <p>Recibe visualizaciones realistas de tu remodelación antes de colocar el primer ladrillo o pintar la pared.</p>
                     </article>
                 </div>
             </div>
         </section>
 
-        <section id="impact" class="impact-section">
-            <div class="container impact-container">
-                <div class="impact-info">
-    <h2 class="section-title">Impacto Ecológico</h2>
-    <p>Visualiza cómo tu transporte reduce la huella de carbono.</p>
-    
-    <div class="video-container">
-        <iframe 
-            width="560" 
-            height="315" 
-            src="https://www.youtube.com/embed/BmfATACzM9g" 
-            title="Video sobre Movilidad Sostenible" 
-            frameborder="0" 
-            allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
-            allowfullscreen>
-        </iframe>
-    </div>
-</div>
-</div>
+        <!-- Impact Section / Video -->
+        <section id="experts" class="impact-section">
+            <div class="container text-center">
+                <h2 class="section-title">Calidad en cada detalle</h2>
+                <p>Descubre cómo nuestros especialistas transforman ambientes comunes en espacios extraordinarios.</p>
+                <div class="video-wrapper">
+                    <iframe src="https://www.youtube.com/embed/BmfATACzM9g" title="Diseño de Interiores" frameborder="0" allowfullscreen></iframe>
+                </div>
             </div>
         </section>
-    </main>
-    <section id="contact" class="contact-section">
-            <div class="container contact-content">
-                <h2 class="section-title">Contáctanos</h2>
-                <p>Únete a la revolución de la movilidad sostenible. Escríbenos para más información.</p>
-                
-                <form class="contact-form">
-                    <input type="email" placeholder="Ingresa tu correo electrónico" required aria-label="Correo electrónico">
-                    <button type="submit" class="btn btn-primary">Suscribirse</button>
+
+        <!-- Contact Section -->
+        <section id="contact" class="contact-section">
+            <div class="container">
+                <h2 class="section-title">Reserva tu asesoría gratuita</h2>
+                <p>Déjanos tus datos y un especialista se pondrá en contacto contigo para resolver tus dudas.</p>
+                <form id="contact-form" class="contact-form">
+                    <input type="text" placeholder="Nombre completo" required>
+                    <input type="email" placeholder="Correo electrónico" required>
+                    <input type="text" placeholder="Teléfono de contacto" required>
+                    <textarea rows="4" placeholder="¿Qué espacio te gustaría transformar? (Ej: Sala, Cocina, Oficina)"></textarea>
+                    <button type="submit" class="btn btn-accent full-width">Enviar solicitud</button>
                 </form>
             </div>
         </section>
+    </main>
+
     <footer class="main-footer">
-        <div class="container footer-content">
-            <div class="footer-brand">EcoMove</div>
+        <div class="container">
+            <div class="footer-brand">SpacePulse</div>
             <div class="social-icons">
-                <a href="#" aria-label="Facebook"><i class="fab fa-facebook"></i></a>
                 <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
-                <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                <a href="#" aria-label="Facebook"><i class="fab fa-facebook"></i></a>
+                <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
             </div>
-            <div class="footer-legal">
-                <a href="#">Términos y condiciones</a> | <a href="#">Privacidad</a>
-            </div>
-            <p class="copyright">© 2025 EcoMove. Todos los derechos reservados.</p>
+            <p>&copy; 2026 SpacePulse. Especialistas en Remodelación de Interiores.</p>
         </div>
     </footer>
 
-<script src="../scripts/profile.js"></script></body>
+    <script src="scripts/profile.js"></script>
+</body>
 </html>

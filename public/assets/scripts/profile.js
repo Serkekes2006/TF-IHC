@@ -1,19 +1,13 @@
-// Esperar a que el HTML cargue completamente
 document.addEventListener('DOMContentLoaded', () => {
-    
-    // Seleccionar elementos del DOM usando nombres en inglés (best practices)
-    const mobileMenuBtn = document.querySelector('.mobile-menu-btn');
+    const menuToggle = document.getElementById('menu-toggle');
     const navList = document.querySelector('.nav-list');
+    const contactForm = document.getElementById('contact-form');
 
-    // Verificar si los elementos existen antes de agregar eventos
-    if (mobileMenuBtn && navList) {
-        
-        mobileMenuBtn.addEventListener('click', () => {
-            // Alternar la clase 'active' para mostrar/ocultar menú
+    // Manejo del menú de hamburguesa
+    if (menuToggle && navList) {
+        menuToggle.addEventListener('click', () => {
             navList.classList.toggle('active');
-            
-            // Opcional: Cambiar el icono de hamburguesa a X
-            const icon = mobileMenuBtn.querySelector('i');
+            const icon = menuToggle.querySelector('i');
             if (navList.classList.contains('active')) {
                 icon.classList.remove('fa-bars');
                 icon.classList.add('fa-times');
@@ -24,5 +18,25 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
-    console.log("EcoMove Landing Page scripts loaded successfully.");
+    // Cerrar menú al hacer clic en un enlace (móvil)
+    const navLinks = document.querySelectorAll('.nav-link');
+    navLinks.forEach(link => {
+        link.addEventListener('click', () => {
+            navList.classList.remove('active');
+            const icon = menuToggle.querySelector('i');
+            if (icon) {
+                icon.classList.remove('fa-times');
+                icon.classList.add('fa-bars');
+            }
+        });
+    });
+
+    // Validación básica de formulario
+    if (contactForm) {
+        contactForm.addEventListener('submit', (e) => {
+            e.preventDefault();
+            alert('¡Gracias! Un especialista en remodelación se pondrá en contacto contigo pronto.');
+            contactForm.reset();
+        });
+    }
 });
